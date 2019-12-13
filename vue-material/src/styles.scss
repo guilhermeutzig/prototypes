@@ -1,0 +1,20 @@
+@import "~@material/button/mdc-button";
+@import "~@material/textfield/mdc-text-field";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 40px;
+  margin: 0 0 60px;
+}
+
+.add-user {
+  margin-top: 20px;
+  @include mdc-button-container-fill-color(blue);
+}
+
+@import './components/Components.scss';

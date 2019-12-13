@@ -1,0 +1,12 @@
+.form {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 0;
+  list-style: none;
+
+  &__text-field {
+    @include mdc-text-field-fill-color(white);
+    margin-bottom: 40px;
+    width: 100%;
+  }
+}
