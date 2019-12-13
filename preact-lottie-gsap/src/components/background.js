@@ -31,7 +31,7 @@ class Background extends Component {
       const cloud = this.createCloud();
       background.appendChild(cloud);
       this.animateCloud(cloud);
-    }, 800);
+    }, 1500);
   }
 
   createCloud() {

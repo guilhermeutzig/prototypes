@@ -27,7 +27,7 @@ class Builings extends Component {
       const newBuilding = this.createBuilding();
       buildings.appendChild(newBuilding);
       this.animateBuilding(newBuilding);
-    }, 1500);
+    }, 3000);
   }
 
   toggleGenerating() {
