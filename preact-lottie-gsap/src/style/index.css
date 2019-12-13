@@ -1,0 +1,143 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: #FAFAFA;
+	font-family: 'Helvetica Neue', arial, sans-serif;
+	font-weight: 400;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#app {
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+#motorcycle {
+	position: absolute;
+	bottom: -50px;
+	left: 50%;
+	transform: translateX(-50%) rotate(2deg);
+	width: 500px;
+	z-index: 2;
+}
+
+.background {
+	background-color: #87b5ff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
+.background button {
+	position: relative;
+	z-index: 99;
+}
+
+.background .cloud {
+	position: absolute;
+}
+
+.ground {
+	position: absolute;
+	bottom: 0;
+	height: 300px;
+	left: 0;
+	width: 100%;
+	background-color: #444;
+	z-index: 1;
+}
+
+.ground .border {
+	height: 4px;
+	background-color: white;
+	width: 100%;
+	position: absolute;
+	left: 0;
+}
+
+.ground .border.top {
+	top: 15px;
+}
+
+.ground .border.bottom {
+	bottom: 15px;
+}
+
+.ground .yellow-lines {
+	border-top: 4px solid yellow;
+	border-right: 0;
+	border-left: 0;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	padding: 5px 0;
+	left: 0;
+	transform: translateY(-50%);
+	z-index: 3;
+}
+
+.ground .yellow-lines.dashed {
+	border-top: 0;
+	border-bottom: 4px dashed yellow;
+	width: 100%;
+	z-index: 2;
+	background-color: #444;
+}
+
+.ground .yellow-lines.full {
+	border-top: 0;
+	border-bottom: 4px solid yellow;
+	width: 100%;
+	left: 0;
+	z-index: 1;
+}
+
+.buildings {
+	position: absolute;
+	bottom: 297px;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+.buildings button {
+	position: relative;
+	z-index: 99;
+}
+
+.buildings .building {
+	position: absolute;
+	z-index: 3;
+}
+
+.buildings .building-1 {
+	bottom: -84px;
+	width: 800px;
+}
+
+.buildings .building-2 {
+	bottom: -74px;
+	width: 800px;
+}
+
+.buildings .building-3 {
+	bottom: 3px;
+	width: 500px;
+}
+
+.buildings .building-4 {
+	bottom: -29px;
+	width: 800px;
+}
