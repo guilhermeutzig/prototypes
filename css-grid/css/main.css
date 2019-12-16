@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  display: grid;
+  grid-template-rows: auto 50px;
+  grid-template-columns: 12% auto;
+  grid-template-areas:
+    'sidebar right'
+    'footer footer';
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  float: right;
+}
+
+ul li {
+  display: inline;
+}
+
+ul li a {
+  color: #fff;
+  padding: 15px;
+}
+
+#logo {
+  padding: 15px;
+  margin-left: 15px;
+  background-color: #f3f1c7;
+  color: #298383;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+}
+
+header {
+  background-color: #41c7c7;
+  display: grid;
+  grid-template-columns: fit-content(20%) auto;
+  grid-area: head;
+}
+
+#hero {
+  background-color: #36adad;
+  padding: 2em;
+  border-top: 5px solid #2ea0a0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-area: hero;
+}
+
+#content h1 {
+  text-transform: uppercase;
+  color: #fffbc5;
+}
+
+#content p {
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+#mountain {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #1c9090;
+  color: white;
+  padding: 1em;
+}
+
+.main {
+  grid-area: right;
+  grid-template-rows: 51px fit-content(30%) 40%;
+  display: grid;
+  grid-template-areas:
+      'head'
+      'hero'
+      'invention'
+      'features';
+}
+
+footer {
+  grid-area: footer;
+  background-color: lightgray;
+}
+
+#features {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  grid-area: features;
+}
+
+#features span {
+  font-size: 2rem;
+}
+
+#features li {
+  background-color: lightgray;
+  padding: 1em;
+}
+
+#features li:nth-child(2) {
+  background-color: #e1e1e1;
+}
+
+#features li:nth-child(3) {
+  background-color: #e9e9e9;
+}
+
+#features li:nth-child(4) {
+  background-color: #f1f1f1;
+}
+
+#features li:nth-child(5) {
+  background-color: lightgray;
+}
+
+#features p {
+  color: #4c4c4c;
+}
+
+#info {
+  background-color: #f2f2f2;
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: space-around;
+  grid-area: invention;
+}
+
+#info p {
+  color: black;
+}
+
+#mountain-vector {
+  width: 200px;
+  align-self: center;
+}
+
+@media screen and (max-width: 60em) {
+  body {
+    grid-template-columns: auto;
+    grid-template-areas:
+      'right'
+      'footer';
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    grid-template-areas:
+        'head'
+        'hero'
+        'features'
+        'invention';
+  }
+
+  #features {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  #features li:last-child {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .main {
+    grid-template-rows: auto fit-content(30%) 40% auto;
+  }
+
+  header {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  #logo {
+    margin: 0;
+  }
+
+  nav ul {
+    float: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  nav a {
+    width: calc(25% - 35px);
+    display: inline-block;
+    font-size: .9em;
+  }
+
+  #hero {
+    grid-template-columns: auto;
+  }
+
+  .main {
+    grid-template-areas:
+        'head'
+        'hero'
+        'invention'
+        'features';
+  }
+}
