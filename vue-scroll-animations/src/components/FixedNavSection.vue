@@ -79,7 +79,7 @@ export default {
           element: items[i].querySelector(".item-title"),
           targetElement: reference,
           duration: 1000,
-          verticalPadding: window.innerHeight / 4
+          verticalPadding: (window.innerHeight - 600 - 5) / 2
         });
         console.log(reference);
       });
