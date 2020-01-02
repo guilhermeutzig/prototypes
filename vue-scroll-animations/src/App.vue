@@ -17,26 +17,26 @@
               transform="translate(982 591) rotate(180)"
               fill="none"
             >
-              <path d="M21.5,0,43,37H0Z" stroke="none"></path>
+              <path d="M21.5,0,43,37H0Z" stroke="none" />
               <path
                 d="M 21.5 3.980747222900391 L 3.475299835205078 35 L 39.52470016479492
         35 L 21.5 3.980747222900391 M 21.5 0 L 43 37 L 0 37 L 21.5 0 Z"
                 stroke="none"
                 fill="#fff"
-              ></path>
+              />
             </g>
             <g
               data-name="Polygon 2"
               transform="translate(982 605) rotate(180)"
               fill="none"
             >
-              <path d="M21.5,0,43,37H0Z" stroke="none"></path>
+              <path d="M21.5,0,43,37H0Z" stroke="none" />
               <path
                 d="M 21.5 3.980747222900391 L 3.475299835205078 35 L 39.52470016479492
         35 L 21.5 3.980747222900391 M 21.5 0 L 43 37 L 0 37 L 21.5 0 Z"
                 stroke="none"
                 fill="#fff"
-              ></path>
+              />
             </g>
           </g>
         </svg>
@@ -89,6 +89,7 @@ main {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
+  position: relative;
 }
 
 html,
