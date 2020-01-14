@@ -1,5 +1,5 @@
 <template>
-  <button :class="secondary ? secondary : null">{{ text }}</button>
+  <button :class="{'secondary': secondary}" :style="{ width: width ? `${width}px` : '100%' }">{{ text }}</button>
 </template>
 
 <style lang="scss" scoped>
@@ -11,7 +11,6 @@ button {
   font-weight: 600;
   padding: 8px 0;
   text-transform: uppercase;
-  width: 100%;
   border: 0;
 }
 </style>
@@ -30,6 +29,10 @@ export default {
     onClick: {
       type: Function,
       default: () => {}
+    },
+    width: {
+      type: String,
+      default: undefined
     }
   }
 }

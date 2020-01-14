@@ -8,7 +8,7 @@
 @import './scss/index.scss';
 
 main {
-  font-family: 'DIN', Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;

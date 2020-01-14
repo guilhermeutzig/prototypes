@@ -1,28 +1,17 @@
 <template>
-  <section>
-    <h1>Cadastro</h1>
+  <Section>
+    <Title text="Cadastro" />
     <Input type="text" placeholder="E-mail" name="email" />
     <Input type="password" placeholder="Senha" name="password" />
     <Input type="password" placeholder="Confirmar senha" name="confirm_password" />
     <Button text="Cadastrar" />
     <p>Já tem uma conta? <Link href="/login" text="Faça seu login" /></p>
-  </section>
+  </Section>
 </template>
 
 <style lang="scss" scoped>
-section {
-  padding: 0 31px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
 h1 {
-  font-size: 24px;
-  color: white;
-  margin: 0 0 26px;
+  margin-bottom: 26px;
 }
 
 input,
@@ -38,15 +27,19 @@ p {
 </style>
 
 <script>
+import Section from './../components/Section';
 import Input from './../components/Input';
 import Button from './../components/Button';
 import Link from './../components/Link';
+import Title from './../components/Title';
 
 export default {
   components: {
     Input,
     Button,
-    Link
+    Link,
+    Section,
+    Title
   }
 }
 </script>

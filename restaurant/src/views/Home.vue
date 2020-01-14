@@ -1,7 +1,20 @@
 <template>
-  <section></section>
+  <Section valign="top">
+    <Header text="Cardápio" />
+    <Card />
+  </Section>
 </template>
 
 <script>
-export default {}
+import Section from './../components/Section';
+import Header from './../components/Header';
+import Card from './../components/Card';
+
+export default {
+  components: {
+    Section,
+    Header,
+    Card
+  }
+}
 </script>
