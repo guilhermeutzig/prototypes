@@ -160,7 +160,10 @@
 </template>
 
 <script>
-import { TweenMax, TimelineMax, Quint } from "gsap";
+import gsap from "gsap";
+import { TweenMax, TimelineMax, Quint } from 'gsap/all'
+
+gsap.registerPlugin(TweenMax, TimelineMax, Quint);
 
 export default {
   name: "Employees",
