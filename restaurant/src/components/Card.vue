@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <img src="http://placehold.it/258x168" alt="">
+    <img :src="image" :alt="card.name" v-if="image">
     <div class="body">
       <ul class="stars">
         <li><Star /></li>
@@ -9,10 +9,10 @@
         <li><Star /></li>
         <li><Star :disabled="true" /></li>
       </ul>
-      <h3>Hambúrguer de bacon</h3>
-      <p>Ingredientes: pão, carne, queijo, cebola, tomate, alface, molho barbecue e bacon</p>
+      <h3>{{ card.name }}</h3>
+      <p>{{ card.description }}</p>
       <div class="bottom">
-        <h2>R$ 25,00</h2>
+        <h2>R$ {{ card.price }}</h2>
         <Button text="Adicionar ao carrinho" width="165" />
       </div>
     </div>
@@ -23,6 +23,9 @@
 .card {
   background-color: black;
   color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
 }
 
 img {
@@ -54,7 +57,7 @@ h3 {
 }
 
 p {
-  font-size: 10px;
+  font-size: 12px;
   margin: 0 0 25px;
 }
 
@@ -78,6 +81,12 @@ export default {
   components: {
     Star,
     Button
-  }
+  },
+  props: {
+    card: {
+      type: Object,
+      default: function () { return {} }
+    }
+  },
 }
 </script>
