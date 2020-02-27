@@ -4,7 +4,7 @@
   "description": "## Rectangle and Ellipse",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --entry ./src/index.html --open"
+    "dev": "webpack-dev-server --entry ./src/index.html --inline --hot --colors --watch-poll"
   },
   "keywords": [],
   "author": "",

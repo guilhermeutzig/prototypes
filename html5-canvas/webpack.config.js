@@ -4,8 +4,9 @@ module.exports = {
   stats: 'minimal',
   devServer: {
     contentBase: path.join(__dirname, 'src'),
-    port: 9999
+    port: 8080,
   },
+  watch: true,
   module: {
     rules: [
       {

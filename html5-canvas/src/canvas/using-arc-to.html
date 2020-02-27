@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rectangles</title>
+  <link rel="icon" type="image/png" href="/favicon.ico">
+  <link rel="stylesheet" href="/style.css">
+
+  <script>
+    window.onload = function() {
+      var canvas = document.getElementById('myCanvas');
+      var ctx = canvas.getContext('2d');
+
+      ctx.strokeStyle = 'red';
+      ctx.fillStyle = 'navy';
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+
+      // where it will start on the canvas
+      ctx.moveTo(80, 50);
+
+      // the path that will follow on canvas, with the radius
+      ctx.arcTo(210, 50, 210, 70, 20);
+      ctx.arcTo(210, 200, 160, 200, 20);
+      ctx.arcTo(60, 200, 60, 180, 20);
+      ctx.arcTo(60, 50, 100, 50, 20);
+
+      ctx.stroke();
+      ctx.fill();
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="600" height="400"></canvas>
+</body>
+</html>

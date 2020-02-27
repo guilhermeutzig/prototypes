@@ -10,13 +10,13 @@
 - `fill`
 - `fillRect` | (x, y, w, h)
 - `rect` | (x, y, w, h)
-- `stroke` |
+- `stroke`
 - `strokeRect` | (x, y, w, h)
 
 ### Properties
 
-- `fillStyle` |
-- `strokeStyle` |
+- `fillStyle`
+- `strokeStyle`
 
 The order initially to create an element is to define a color (stroke or fill), create the element, then fill/stroke it with the color selected
 

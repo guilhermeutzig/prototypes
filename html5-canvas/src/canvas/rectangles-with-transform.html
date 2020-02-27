@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rectangles</title>
+  <title>Rectangles with transform</title>
   <link rel="icon" type="image/png" href="/favicon.ico">
   <link rel="stylesheet" href="/style.css">
 
@@ -11,15 +11,19 @@
       var canvas = document.getElementById('myCanvas');
       var ctx = canvas.getContext('2d');
 
-      var scores = [100, 90, 85, 45, 72, 88];
+      var scores = [120, 90, 85, 45, 72, 88];
       var width = 50;
-      var currX = 50;
+      var currX = 0;
       var base = 200;
+
+      ctx.translate(375, 200);
+      // 1 * Math.PI = 180
+      // 2 * Math.PI = 360
+      ctx.rotate(1 * Math.PI);
 
       ctx.fillStyle = 'green';
       for (var i = 0; i < scores.length; i++) {
-        var h = scores[i];
-        ctx.fillRect(currX, canvas.height - h, width, h);
+        ctx.fillRect(currX, 0, width, scores[i]);
         currX += width + 10;
       }
     }
