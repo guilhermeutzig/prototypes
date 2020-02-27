@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
+  <link rel="icon" type="image/png" href="/favicon.ico">
+  <link rel="stylesheet" href="/style.css">
+
+  <script>
+    window.onload = function() {
+      var canvas = document.getElementById('myCanvas');
+      var ctx = canvas.getContext('2d');
+
+      ctx.fillStyle = 'Green';
+      // x, y, width, height
+      ctx.fillRect(300, 200, 200, 100);
+
+      ctx.fillStyle = 'Navy';
+      // x, y, radius, startAngle, endAngle, antiClockwise
+      ctx.arc(100, 100, 50, 0, 2 * Math.PI, false)
+      ctx.fill();
+    }
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="600" height="400"></canvas>
+</body>
+</html>
