@@ -1,4 +1,5 @@
 import express from 'express'
+import bodyParser from 'body-parser'
 import routes from './interfaces/routes'
 import morgan from './infrastructure/helpers/morgan'
 
@@ -10,6 +11,10 @@ class App {
       this.express = express()
       // logging
       this.express.use(morgan)
+      // body parser
+      this.express.use(bodyParser.urlencoded({
+        extended: true
+      }))
       // global middlewares, before any route.
       this.express.use(express.json())
       // routes
