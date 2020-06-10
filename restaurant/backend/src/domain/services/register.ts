@@ -5,7 +5,8 @@ class RegisterService {
   public async register(username: string, password: string) {
     const userExists = await Login.findOne({ where: { loginName: username } })
     if (!userExists) {
-      const model = Login.create({ loginName: username, password })
+      const passwordHash = await bcrypt.hash(password, 8);
+      const model = Login.create({ loginName: username, passwordHash })
       if (model) return model
       return null
     }

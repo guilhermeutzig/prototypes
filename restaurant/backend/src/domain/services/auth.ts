@@ -4,16 +4,15 @@ import jwt from 'jsonwebtoken'
 
 class Auth {
   private generateToken (model: any) {
-    if (process.env.JWT_SECRET_KEY) {
-      return jwt.sign(JSON.stringify(model), process.env.JWT_SECRET_KEY)
-    }
+    const secret = process.env.JWT_SECRET_KEY || ''
+    if (secret) return jwt.sign(JSON.stringify(model), secret)
   }
 
   public async login (loginName: string, password: string) {
     const model = await Login.findOne({ where: { loginName } })
     if (model) {
-      var token = this.generateToken(model)
-      return token
+      const samePassword = await bcrypt.compare(password, model.passwordHash)
+      if (samePassword) return this.generateToken(model)
     }
   }
 }

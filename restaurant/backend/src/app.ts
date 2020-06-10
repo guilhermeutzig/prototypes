@@ -2,6 +2,7 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import routes from './interfaces/routes'
 import morgan from './infrastructure/helpers/morgan'
+import authMiddleware from './domain/middlewares/auth'
 
 class App {
     public express: express.Application
@@ -17,6 +18,7 @@ class App {
       }))
       // global middlewares, before any route.
       this.express.use(express.json())
+      this.express.use(authMiddleware)
       // routes
       this.express.use(routes)
     }
