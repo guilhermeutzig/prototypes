@@ -1,21 +1,15 @@
 import 'package:flutter/material.dart';
 import './screens/home.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(new HelloFlutterApp());
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class HelloFlutterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Hello Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Title in AppBar')
-        ),
-        body: Home()
-      )
-    );
+        debugShowCheckedModeBanner: false,
+        title: "Hello Flutter App",
+        home: Scaffold(
+            appBar: AppBar(title: Text("Title in App Bar")), body: Home()));
   }
 }
