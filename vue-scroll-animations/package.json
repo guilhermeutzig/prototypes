@@ -19,7 +19,7 @@
     "elevator.js": "^1.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "gsap": "^3.0.4",
+    "gsap": "^3.6.0",
     "lottie-web": "^5.5.10",
     "vue-template-compiler": "^2.6.10"
   },
